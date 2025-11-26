@@ -1,0 +1,25 @@
+import 'package:flutter/material.dart';
+
+class AdminDashboardPage extends StatelessWidget {
+  const AdminDashboardPage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: const Text('Admin Dashboard')),
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Card(child: ListTile(title: const Text('Total medicines'), subtitle: const Text('---'))),
+            const SizedBox(height: 8),
+            Card(child: ListTile(title: const Text('Visibility'), subtitle: const Text('---'))),
+            const SizedBox(height: 12),
+            ElevatedButton(onPressed: () => Navigator.of(context).pushNamed('/admin/medicines'), child: const Text('Manage Medicines')),
+          ],
+        ),
+      ),
+    );
+  }
+}
