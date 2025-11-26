@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'core/theme/app_theme.dart';
 import 'app_router.dart';
 
 void main() {
@@ -14,7 +15,7 @@ class MainApp extends ConsumerWidget {
     return MaterialApp.router(
       routerConfig: appRouter,
       title: 'Medicine Availability',
-      theme: ThemeData(primarySwatch: Colors.blue, useMaterial3: true),
+      theme: AppTheme.lightTheme,
     );
   }
 }
