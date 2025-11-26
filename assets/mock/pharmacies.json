@@ -1,0 +1,16 @@
+[
+  {
+    "id": "ph1",
+    "name": "Nufia Pharmacy",
+    "address": "123 Main St, Kampala",
+    "phone": "+256700000001",
+    "visible": true
+  },
+  {
+    "id": "ph2",
+    "name": "HealthPlus",
+    "address": "45 Market Rd, Kampala",
+    "phone": "+256700000002",
+    "visible": true
+  }
+]

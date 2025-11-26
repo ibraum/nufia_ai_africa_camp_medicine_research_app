@@ -1,0 +1,26 @@
+[
+  {
+    "id": "med1",
+    "name": "Paracetamol",
+    "description": "Pain reliever and fever reducer",
+    "price": 1.5,
+    "stock": 42,
+    "pharmacyId": "ph1"
+  },
+  {
+    "id": "med2",
+    "name": "Amoxicillin",
+    "description": "Antibiotic",
+    "price": 3.75,
+    "stock": 12,
+    "pharmacyId": "ph2"
+  },
+  {
+    "id": "med3",
+    "name": "Cough Syrup",
+    "description": "Soothes cough",
+    "price": 2.0,
+    "stock": 0,
+    "pharmacyId": "ph1"
+  }
+]

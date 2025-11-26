@@ -13,23 +13,31 @@ class PharmacyDetailPage extends ConsumerWidget {
       appBar: AppBar(title: const Text('Pharmacy Detail')),
       body: shopsAsync.when(
         data: (shops) {
-          final shop = shops.firstWhere((s) => s.id == id, orElse: () => shops.first);
+          final shop = shops.firstWhere(
+            (s) => s.id == id,
+            orElse: () => shops.first,
+          );
           return Padding(
             padding: const EdgeInsets.all(16.0),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(shop.name, style: Theme.of(context).textTheme.headlineSmall),
+                Text(
+                  shop.name,
+                  style: Theme.of(context).textTheme.headlineSmall,
+                ),
                 const SizedBox(height: 8),
                 Text(shop.address),
                 const SizedBox(height: 8),
                 Text('Phone: ${shop.phone}'),
                 const SizedBox(height: 12),
-                Row(children: [
-                  const Text('Visible in search:'),
-                  const SizedBox(width: 8),
-                  Switch(value: shop.visible, onChanged: (v) {}),
-                ])
+                Row(
+                  children: [
+                    const Text('Visible in search:'),
+                    const SizedBox(width: 8),
+                    Switch(value: shop.visible, onChanged: (v) {}),
+                  ],
+                ),
               ],
             ),
           );

@@ -20,13 +20,11 @@ final appRouter = GoRouter(
     ),
     GoRoute(
       path: '/medicine/:id',
-      builder: (context, state) =>
-          MedicineDetailPage(id: state.params['id'] ?? ''),
+      builder: (context, state) => MedicineDetailPage(id: state.pathParameters['id'] ?? ''),
     ),
     GoRoute(
       path: '/pharmacy/:id',
-      builder: (context, state) =>
-          PharmacyDetailPage(id: state.params['id'] ?? ''),
+      builder: (context, state) => PharmacyDetailPage(id: state.pathParameters['id'] ?? ''),
     ),
     GoRoute(
       path: '/admin/login',

@@ -14,9 +14,15 @@ class AdminLoginPage extends StatelessWidget {
           children: [
             const TextField(decoration: InputDecoration(labelText: 'Email')),
             const SizedBox(height: 8),
-            const TextField(decoration: InputDecoration(labelText: 'Password'), obscureText: true),
+            const TextField(
+              decoration: InputDecoration(labelText: 'Password'),
+              obscureText: true,
+            ),
             const SizedBox(height: 12),
-            ElevatedButton(onPressed: () => context.go('/admin/dashboard'), child: const Text('Login')),
+            ElevatedButton(
+              onPressed: () => context.go('/admin/dashboard'),
+              child: const Text('Login'),
+            ),
           ],
         ),
       ),

@@ -12,7 +12,8 @@ class MedicinesListPage extends ConsumerWidget {
     return Scaffold(
       appBar: AppBar(title: const Text('Medicines')),
       floatingActionButton: FloatingActionButton(
-        onPressed: () => Navigator.of(context).pushNamed('/admin/medicines/add'),
+        onPressed: () =>
+            Navigator.of(context).pushNamed('/admin/medicines/add'),
         child: const Icon(Icons.add),
       ),
       body: Padding(
@@ -20,10 +21,11 @@ class MedicinesListPage extends ConsumerWidget {
         child: medsAsync.when(
           data: (meds) => ListView.builder(
             itemCount: meds.length,
-            itemBuilder: (context, index) => MedicineCard(medicine: meds[index]),
+            itemBuilder: (context, index) =>
+                MedicineCard(medicine: meds[index]),
           ),
           loading: () => const Center(child: CircularProgressIndicator()),
-          error: (e, st) => const Center(child: Text('Error')), 
+          error: (e, st) => const Center(child: Text('Error')),
         ),
       ),
     );

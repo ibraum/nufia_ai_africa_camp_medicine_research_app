@@ -12,11 +12,25 @@ class AdminDashboardPage extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Card(child: ListTile(title: const Text('Total medicines'), subtitle: const Text('---'))),
+            Card(
+              child: ListTile(
+                title: const Text('Total medicines'),
+                subtitle: const Text('---'),
+              ),
+            ),
             const SizedBox(height: 8),
-            Card(child: ListTile(title: const Text('Visibility'), subtitle: const Text('---'))),
+            Card(
+              child: ListTile(
+                title: const Text('Visibility'),
+                subtitle: const Text('---'),
+              ),
+            ),
             const SizedBox(height: 12),
-            ElevatedButton(onPressed: () => Navigator.of(context).pushNamed('/admin/medicines'), child: const Text('Manage Medicines')),
+            ElevatedButton(
+              onPressed: () =>
+                  Navigator.of(context).pushNamed('/admin/medicines'),
+              child: const Text('Manage Medicines'),
+            ),
           ],
         ),
       ),
